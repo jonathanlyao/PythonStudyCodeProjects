@@ -1,0 +1,53 @@
+port numpy as np
+import pandas as pd
+
+df = pd.DataFrame({'col1':[1,2,3,4],
+                   'col2':[444,555,666,444],
+                   'col3':['abc','def','ghi','xyz']})
+print(df.head())
+print(df['col2'].unique())
+print(df['col2'].nunique()) # equal to print(len(df['col2'].unique()))
+print(df['col2'].value_counts())
+
+df1 = df[(df['col1']>2) & (df['col2']==444)]  # condition must be col2 , >2 and ==444
+print(df1)
+
+print(df['col1']>2)
+
+def times2(x):
+    return x*2
+
+print(df['col1'].sum()) # add up and get the sum result of all the value in column 1
+
+df2 = df['col1'].apply(times2) # "apply" can be used for the function that we just defined
+print(df2)
+
+print(df['col3'].apply(len)) # check the length of string under the column
+
+print(df['col2'].apply(lambda x: x*2)) # lambda is the same function as times2 
+
+df3 = df.drop('col1',axis=1, inplace=True) # drop/delete a column from the table, inplace=True means permanent delete
+
+print(df)
+
+df4 = df.columns
+print(df4)
+
+print(df.index)
+
+df5 = df.sort_values('col2')
+print(df5)
+
+df6 = df.isnull()
+print(df6)
+
+data = {'A': ['foo','foo','foo','bar','bar','bar'],
+        'B':['one','one','two','two','one','one'],
+        'C':['x','y','x','y','x','y'],
+        'D':[1,3,2,5,4,1]}
+
+df7 = pd.DataFrame(data)
+print(df7)
+
+df8 = df7.pivot_table(values='D',index=['A','B'],columns=['C']) # pivot table allow us to see table from different perspective
+print(df8)
