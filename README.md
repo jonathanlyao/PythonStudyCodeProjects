@@ -1,6 +1,10 @@
 # PythonStudyCodeProjects
 
-# I including the studying of python study code in this README page. Since I used Pycharm for the coding so there would be a lot of "print()"
+# There are two projects I have included in this portfolio. 
 
-# There would be more analytic projects coming up soon 
+1. 911 Call Data of Montgomery County, PA
+
+2. Stock Data of Top Banks in the U.S. 
+
+# There would be more python projects coming up soon 
 
