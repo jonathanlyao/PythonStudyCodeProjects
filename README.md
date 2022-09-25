@@ -6,5 +6,7 @@
 
 2. Stock Data of Top Banks in the U.S. 
 
+3. US Real Estate Market Project
+
 # There would be more python projects coming up soon 
 
